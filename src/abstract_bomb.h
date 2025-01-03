@@ -2,9 +2,9 @@
 
 #include "curses.h"
 #include <iostream>
+#include "abstract_object.h"
 
-
-class IGameObject {
+class IBomb : public IGameObject {
 protected:
     struct TPosition {
         int x = 0;
@@ -12,7 +12,7 @@ protected:
     } position;
 
 public:
-    virtual ~IGameObject() = default;
+    virtual ~IBomb() = default;
     virtual int GetX() const = 0;
     virtual int GetY() const = 0;
     virtual bool IsAlive() const = 0;

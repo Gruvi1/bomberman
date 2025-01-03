@@ -4,7 +4,15 @@
 TField::TField(WINDOW* win) : win(win) {
     getmaxyx(win, maxY, maxX);
     maxY -= 1;
-    maxX -= 1;
+    maxX -= 10;
+}
+
+int TField::GetMaxX() {
+    return maxX;
+}
+
+int TField::GetMaxY() {
+    return maxY;
 }
 
 void TField::Display() {
@@ -23,12 +31,4 @@ void TField::Display() {
         mvwprintw(win, i, maxX, "%c", verticalBorder);
     }
     wrefresh(win);
-}
-
-int TField::GetMaxX() {
-    return maxX;
-}
-
-int TField::GetMaxY() {
-    return maxY;
 }

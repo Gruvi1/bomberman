@@ -19,8 +19,12 @@ private:
 
 public:
     TField (WINDOW* win);
-    void Update() override {};
-    void Display() override;
+    int GetX() const override {return 0;}
+    int GetY() const override {return 0;}
     int GetMaxX();
     int GetMaxY();
+    bool IsAlive() const override {return 1;}
+    void ReduceHp() override {};
+    void Update() override {};
+    void Display() override;
 };

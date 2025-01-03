@@ -1,11 +1,11 @@
-#include <iostream>
+#include "bomberman/game.h"
 #include <curses.h>
-#include "game.h"
+#include <iostream>
 
 
-int main(int argc, char* argv[]) {
+int main() {
     TGame game;
-    game.InitGame();
     game.Game();
+
     return 0;
 }
